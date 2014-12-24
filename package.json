@@ -1,0 +1,17 @@
+{
+  "name": "font-store",
+  "version": "0.0.1",
+  "description": "Stores base64 encoded web fonts in LocalStorage for high performance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "keywords": [
+    "webfont",
+    "font",
+    "base64",
+    "localstorage"
+  ],
+  "author": "Dillon de Voor",
+  "license": "BSD-2-Clause"
+}
