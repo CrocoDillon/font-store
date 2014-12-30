@@ -1,10 +1,14 @@
 {
   "name": "font-store",
-  "version": "0.0.1",
-  "description": "Stores base64 encoded web fonts in LocalStorage for high performance.",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha test/*.js"
+  "version": "1.0.0",
+  "description": "Base64 encodes web fonts to cache in LocalStorage for high performance.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CrocoDillon/font-store.git"
+  },
+  "main": "bin/font-store",
+  "bin": {
+    "font-store": "bin/font-store"
   },
   "keywords": [
     "webfont",
@@ -12,6 +16,6 @@
     "base64",
     "localstorage"
   ],
-  "author": "Dillon de Voor",
-  "license": "BSD-2-Clause"
+  "author": "Dillon de Voor (http://crocodillon.com)",
+  "license": "CC BY 4.0"
 }
