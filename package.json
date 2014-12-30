@@ -19,10 +19,11 @@
   "author": "Dillon de Voor (http://crocodillon.com)",
   "license": "CC BY 4.0",
   "devDependencies": {
+    "chai": "^1.10.0",
     "mocha": "^2.1.0"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --reporter dot",
-    "watch-tests": "./node_modules/mocha/bin/mocha --watch --reporter dot "
+    "test": "./node_modules/mocha/bin/mocha test/** --reporter dot",
+    "watch-tests": "./node_modules/mocha/bin/mocha test/** --watch --growl --reporter dot "
   }
 }
