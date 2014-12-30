@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 var convert = require('../lib/font-store');
 
-var args = process.argv.slice(2); console.log(args);
+var args = process.argv.slice(2);
 convert(args[0]);
