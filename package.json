@@ -17,5 +17,16 @@
     "localstorage"
   ],
   "author": "Dillon de Voor (http://crocodillon.com)",
-  "license": "CC BY 4.0"
+  "license": "CC BY 4.0",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/** --reporter dot",
+    "watch-tests": "./node_modules/mocha/bin/mocha test/** --watch --growl --reporter dot "
+  },
+  "dependencies": {
+    "async": "^0.9.0"
+  }
 }
