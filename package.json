@@ -25,5 +25,8 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test/** --reporter dot",
     "watch-tests": "./node_modules/mocha/bin/mocha test/** --watch --growl --reporter dot "
+  },
+  "dependencies": {
+    "async": "^0.9.0"
   }
 }
