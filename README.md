@@ -1,3 +1,9 @@
+# font-store
+
+[![Build Status](https://travis-ci.org/CrocoDillon/font-store.svg?branch=master)](https://travis-ci.org/CrocoDillon/font-store)
+
+Base64 encodes web fonts to cache in LocalStorage for high performance.
+
 ## Quick Start
 
 Install this module globally and convert a web font from Google:
