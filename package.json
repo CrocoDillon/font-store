@@ -23,8 +23,8 @@
     "mocha": "^2.1.0"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test/** --reporter dot",
-    "watch-tests": "./node_modules/mocha/bin/mocha test/** --watch --growl --reporter dot "
+    "test": "./node_modules/mocha/bin/mocha test/**",
+    "watch-tests": "./node_modules/mocha/bin/mocha test/** --watch --growl "
   },
   "dependencies": {
     "async": "^0.9.0"
