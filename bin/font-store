@@ -1,5 +1,13 @@
 #!/usr/bin/env node
-var convert = require('../lib/index');
+var fontStore = require('../lib/fontStore');
 
 var args = process.argv.slice(2);
-convert(args[0]);
+fontStore(args[0], function(err,fileName,json){
+  if( err ){
+    console.log( 'Oops. An error occurred', err.message );
+    process.exit(1);
+  }
+
+  console.log( 'Conversion successful!' );
+  console.log( 'The file '+fileName+' contains the optimized font' );
+});
