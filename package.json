@@ -7,6 +7,10 @@
     "url": "https://github.com/CrocoDillon/font-store.git"
   },
   "main": "bin/font-store",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/**",
+    "watch-tests": "./node_modules/mocha/bin/mocha test/** --watch --growl "
+  },
   "bin": {
     "font-store": "bin/font-store"
   },
@@ -18,15 +22,12 @@
   ],
   "author": "Dillon de Voor (http://crocodillon.com)",
   "license": "CC BY 4.0",
+  "dependencies": {
+    "async": "^0.9.0",
+    "yargs": "~1.3.3"
+  },
   "devDependencies": {
     "chai": "^1.10.0",
     "mocha": "^2.1.0"
-  },
-  "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test/**",
-    "watch-tests": "./node_modules/mocha/bin/mocha test/** --watch --growl "
-  },
-  "dependencies": {
-    "async": "^0.9.0"
   }
 }
