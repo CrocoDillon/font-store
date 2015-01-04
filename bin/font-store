@@ -4,6 +4,7 @@ var package = require('../package.json'),
     argv = require('yargs')
       .usage(package.description + '\nUsage: font-store [OPTIONS]... [LINK]...')
       .help('help').alias('help', 'h')
+      .showHelpOnFail(false, 'Specify --help for usage and available options')
       .version(package.version, 'version').alias('version', 'V')
       .demand(1)
       .options('format', {
