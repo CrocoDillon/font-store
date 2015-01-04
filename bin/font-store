@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var package = require('../package.json'),
+    fontStore = require('../lib/fontStore'),
     argv = require('yargs')
       .usage(package.description + '\nUsage: font-store [OPTIONS]... [LINK]...')
       .help('help').alias('help', 'h')
@@ -10,12 +11,16 @@ var package = require('../package.json'),
         description: 'Expected font format, either "woff" or "woff2".',
         default: 'woff'
       })
-      .argv,
-    fontStore = require('../lib/fontStore');
+      .argv;
 
-fontStore(argv._[0], function(err, fileName, json) {
+var url = argv._[0],
+    options = {
+      format: argv.format
+    };
+
+fontStore(url, options, function(err, fileName, json) {
   if (err) {
-    console.log('Oops. An error occurred', err.message);
+    console.log('Oops. An error occurred:', err.message);
     process.exit(1);
   }
 
