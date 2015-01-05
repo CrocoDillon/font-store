@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-var package = require('../package.json'),
+var yargs     = require('yargs'),
     fontStore = require('../lib/fontStore'),
-    argv = require('yargs')
+    package   = require('../package.json');
+
+var argv = yargs
       .usage(package.description + '\nUsage: font-store [OPTIONS]... [LINK]...')
       .help('help').alias('help', 'h')
       .showHelpOnFail(false, 'Specify --help for usage and available options')
@@ -12,9 +14,8 @@ var package = require('../package.json'),
         description: 'Expected font format, either "woff" or "woff2".',
         default: 'woff'
       })
-      .argv;
-
-var url = argv._[0],
+      .argv,
+    url = argv._[0],
     options = {
       format: argv.format
     };
