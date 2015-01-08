@@ -1,13 +1,31 @@
 #!/usr/bin/env node
-var fontStore = require('../lib/fontStore');
+var yargs     = require('yargs'),
+    fontStore = require('../lib/fontStore'),
+    package   = require('../package.json');
 
-var args = process.argv.slice(2);
-fontStore(args[0], function(err,fileName,json){
-  if( err ){
-    console.log( 'Oops. An error occurred', err.message );
+var argv = yargs
+      .usage(package.description + '\nUsage: font-store [OPTIONS]... [LINK]...')
+      .help('help').alias('help', 'h')
+      .showHelpOnFail(false, 'Specify --help for usage and available options')
+      .version(package.version, 'version').alias('version', 'V')
+      .demand(1)
+      .options('format', {
+        alias: 'f',
+        description: 'Expected font format, either "woff" or "woff2".',
+        default: 'woff'
+      })
+      .argv,
+    url = argv._[0],
+    options = {
+      format: argv.format
+    };
+
+fontStore(url, options, function(err, fileName, json) {
+  if (err) {
+    console.log('Oops. An error occurred:', err.message);
     process.exit(1);
   }
 
-  console.log( 'Conversion successful!' );
-  console.log( 'The file '+fileName+' contains the optimized font' );
+  console.log('Conversion successful!');
+  console.log('The file ' + fileName + ' contains the converted fonts.');
 });
