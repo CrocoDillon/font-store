@@ -24,3 +24,7 @@ $ font-store --help
 ```
 
 Currently the only option is to specify what format you want, either woff or woff2.
+
+## More information
+
+You can read my article [“Non-blocking web fonts using LocalStorage”](http://crocodillon.com/blog/non-blocking-web-fonts-using-localstorage) or check out a [demo on CodePen](http://codepen.io/CrocoDillon/pen/dkcbs/left/?editors=001).
