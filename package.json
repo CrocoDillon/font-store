@@ -1,6 +1,6 @@
 {
   "name": "font-store",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Base64 encodes web fonts to cache in LocalStorage for high performance.",
   "repository": {
     "type": "git",
