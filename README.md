@@ -1,6 +1,7 @@
 # font-store
 
-[![Build Status](https://travis-ci.org/CrocoDillon/font-store.svg?branch=master)](https://travis-ci.org/CrocoDillon/font-store)
+[![NPM Version](https://img.shields.io/npm/v/font-store.svg?style=flat)](https://npmjs.org/package/font-store)
+[![Build Status](https://img.shields.io/travis/CrocoDillon/font-store.svg?style=flat)](https://travis-ci.org/CrocoDillon/font-store)
 
 Base64 encodes web fonts to cache in LocalStorage for high performance.
 
